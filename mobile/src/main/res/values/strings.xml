@@ -1,3 +1,27 @@
 <resources>
-    <string name="app_name">ThingsHub</string>
+    <string name="app_name" translatable="false">ThingsHub</string>
+    <string name="walnut_type_climate">Climate</string>
+    <string name="walnut_type_conference">Conference</string>
+    <string name="walnut_type_sensdesk">SensDesk</string>
+
+    <string-array name="walnut_types">
+        <item>Select type …</item>
+        <item>@string/walnut_type_climate</item>
+        <item>@string/walnut_type_conference</item>
+        <item>@string/walnut_type_sensdesk</item>
+    </string-array>
+    <string-array name="advertising_intervals">
+        <item>0.1</item>
+        <item>0.5</item>
+        <item>1.0</item>
+        <item>2.0</item>
+        <item>5.0</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="measurement_intervals">
+        <item>10</item>
+        <item>30</item>
+        <item>60</item>
+    </string-array>
+
 </resources>
