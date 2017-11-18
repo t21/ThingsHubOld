@@ -35,6 +35,10 @@
         <service
             android:name=".WalnutConfigBleService"
             android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".LocalStorageService"
+            android:enabled="true"
             android:exported="true"></service>
     </application>
 
