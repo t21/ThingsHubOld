@@ -123,6 +123,9 @@ public class MainActivity extends AppCompatActivity {
         intentFilter.addAction("se.lbhome.thomas.thingshub.ADV_MESSAGE");
         mLocalBroadcastManager = LocalBroadcastManager.getInstance(this);
         mLocalBroadcastManager.registerReceiver(mBleReceiver, intentFilter);
+
+        Intent intent = new Intent(this, LocalStorageService.class);
+        startService(intent);
     }
 
     @Override
@@ -130,6 +133,9 @@ public class MainActivity extends AppCompatActivity {
         super.onPause();
         Log.v(TAG, "onPause");
         mLocalBroadcastManager.unregisterReceiver(mBleReceiver);
+
+        Intent intent = new Intent(this, LocalStorageService.class);
+        stopService(intent);
     }
 
     @Override
