@@ -1,6 +1,7 @@
 package se.berg.thomas.thingshub;
 
 import android.arch.persistence.room.*;
+import android.support.annotation.NonNull;
 
 import se.berg.thomas.commonfunclib.WalnutDevice;
 
@@ -10,33 +11,36 @@ import se.berg.thomas.commonfunclib.WalnutDevice;
 
 @Entity
 public class SensorData {
-    @PrimaryKey
-    private int uid;
 
-    // Bluetooth deviceAddress
+    @PrimaryKey @NonNull
     private String deviceAddress;
 
-//    private Int sensorId;
+    private int timeStamp;
 
-//    @ColumnInfo(name = "first_name")
-//    private String firstName;
+    private int sensorId;
 
-//    @ColumnInfo(name = "last_name")
-//    private String lastName;
+    private double sensorVal;
 
-    // Getters and setters are ignored for brevity,
-    // but they're required for Room to work.
-
-    public SensorData(int uid, String deviceAddress) {
-        this.uid = uid;
+    public SensorData(String deviceAddress, int timeStamp, int sensorId, double sensorVal) {
         this.deviceAddress = deviceAddress;
-    }
-
-    public int getUid() {
-        return uid;
+        this.timeStamp = timeStamp;
+        this.sensorId = sensorId;
+        this.sensorVal = sensorVal;
     }
 
     public String getDeviceAddress() {
         return deviceAddress;
+    }
+
+    public int getTimeStamp() {
+        return timeStamp;
+    }
+
+    public int getSensorId() {
+        return sensorId;
+    }
+
+    public double getSensorVal() {
+        return sensorVal;
     }
 }

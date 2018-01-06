@@ -42,6 +42,7 @@ public class LocalStorageService extends Service {
     public void onDestroy() {
         super.onDestroy();
         Log.d(TAG, "onDestroy");
+        mLocalBroadcastManager.unregisterReceiver(mBleReceiver);
     }
 
     @Override

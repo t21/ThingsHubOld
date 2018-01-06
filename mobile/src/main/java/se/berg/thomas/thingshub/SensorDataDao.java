@@ -1,6 +1,7 @@
 package se.berg.thomas.thingshub;
 
 import android.arch.persistence.room.Dao;
+import android.arch.persistence.room.Delete;
 import android.arch.persistence.room.Insert;
 
 /**
@@ -25,6 +26,6 @@ public interface SensorDataDao {
 //    @Insert
 //    void insertAll(SensorData... users);
 
-//    @Delete
-//    void delete(SensorData user);
+    @Delete
+    void delete(SensorData sensorData);
 }
