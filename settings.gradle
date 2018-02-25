@@ -1,1 +1,1 @@
-include ':mobile', ':things', ':commonfunclib'
+include ':mobile', ':things', ':commonfunclib', ':sharedresources'
